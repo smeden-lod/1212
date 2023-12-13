@@ -20,7 +20,35 @@ class ChaineVide:
     def maxi(self):
         return float('-inf')
 
+
     def cons(self, v):
+        """
+        ajoute v en tête de self
+        """
+        pass
+
+    def append(self, m: Chaine) -> Chaine:
+        pass
+    
+    
+    def reverse(self) -> Chaine:
+        """
+        """
+        pass
+
+    def zip(self, other: Chaine) -> Chaine:
+        """
+        """
+        pass
+
+    def take(self, n) -> Chaine:
+        """
+        """
+        pass
+
+    def drop(self, n: int) -> Chaine:
+        """
+        """
         pass
 
 
