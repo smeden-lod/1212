@@ -28,7 +28,8 @@ class ChaineVide:
         pass
 
     def append(self, m: Chaine) -> Chaine:
-        pass
+
+        return self.queu() == m
     
     
     def reverse(self) -> Chaine:
