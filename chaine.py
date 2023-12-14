@@ -104,7 +104,11 @@ class Chaine:
         renvoie la chaîne constituée des mêmes éléments que self
         mais dans l'ordre inverse
         """
-        pass
+        if self.est_vide():
+            return ChaineVide()
+        else:
+            return self.queue().reverse().append(Chaine(self.tete(), ChaineVide()))
+
 
     def zip(self, other: Chaine, res:Chaine|ChaineVide) -> Chaine:
         """
