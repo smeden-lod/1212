@@ -30,9 +30,11 @@ class ChaineVide:
 
     def cons(self, v):
         """
-        ajoute v en tête de self
+        renvoi la chaine "ch" tel que :
+        ch.tete() -> v
+        ch.queue() -> self
         """
-        pass
+        return Chaine(v, self)
 
     def append(self, m: Chaine) -> Chaine:
         pass
@@ -79,9 +81,11 @@ class Chaine:
 
     def cons(self, v):
         """
-        ajoute v en tête de self
+        renvoi la chaine "ch" tel que :
+        ch.tete() -> v
+        ch.queue() -> self
         """
-        pass
+        return Chaine(v, self)
 
     def append(self, m: Chaine) -> Chaine:
         pass
