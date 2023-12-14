@@ -109,7 +109,10 @@ class Chaine:
         11::3::7::5::12::().take(3) => 11::3::7::()
         11::3::7::5::12::().take(7) => 11::3::7::5::12::()
         """
-        pass
+        if n == 0:
+            return ChaineVide
+        else:
+            return Chaine(self.tete(), self.queue().take(n-1))
 
     def drop(self, n: int) -> Chaine:
         """
