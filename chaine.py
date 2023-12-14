@@ -106,12 +106,16 @@ class Chaine:
         """
         pass
 
-    def zip(self, other: Chaine) -> Chaine:
+    def zip(self, other: Chaine, res:Chaine|ChaineVide) -> Chaine:
         """
-        1::2::3::().zip(8::9::()) => (1, 8)::(2, 9)::()
-        1::().zip(8::9::()) => (1, 8)::()
+        ## Input
+        - other: Chaine à zipper avec self
+        ## Output 
+        - Chaine de tuple contenant forcement 2 variables venant chacun de self et res
         """
-        pass
+        if self.est_vide() or other.est_vide():
+            return res
+        return self.queue().zip(other.queue(), res.append(Chaine((self.tete(), other.tete()))))
 
     def take(self, n) -> Chaine:
         """
