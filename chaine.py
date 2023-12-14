@@ -5,6 +5,14 @@ from __future__ import annotations
 
 class ChaineVide:
     
+
+    def tete(self):
+        raise ValueError("chaine vide")
+    
+    def queue(self):
+        raise ValueError("chaine vide")
+
+
     def est_vide(self) -> bool:
         return True
 
