@@ -5,7 +5,6 @@ from __future__ import annotations
 
 class ChaineVide:
     
-
     def tete(self):
         raise ValueError("chaine vide")
     
