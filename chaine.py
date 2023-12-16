@@ -46,10 +46,14 @@ class ChaineVide:
         """
         pass
 
-    def zip(self, other: Chaine) -> Chaine:
+    def zip(self, other: Chaine, res:ChaineVide|Chaine) -> Chaine:
         """
+        ## Input
+        - other: Chaine à zipper avec self
+        ## Output 
+        - Chaine de tuple contenant forcement 2 variables venant chacun de self et res
         """
-        pass
+        return res
 
     def take(self, n) -> Chaine:
         """
@@ -111,14 +115,14 @@ class Chaine:
             return self.queue().reverse().append(Chaine(self.tete(), ChaineVide()))
 
 
-    def zip(self, other: Chaine, res:Chaine|ChaineVide) -> Chaine:
+    def zip(self, other:Chaine|ChaineVide, res:Chaine|ChaineVide=ChaineVide()) -> Chaine:
         """
         ## Input
         - other: Chaine à zipper avec self
         ## Output 
         - Chaine de tuple contenant forcement 2 variables venant chacun de self et res
         """
-        if self.est_vide() or other.est_vide():
+        if other.est_vide():
             return res
         return self.queue().zip(other.queue(), res.append(Chaine((self.tete(), other.tete()))))
 
