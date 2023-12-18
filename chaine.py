@@ -41,9 +41,6 @@ class ChaineVide:
         return Chaine(self, m)
         return Chaine(self, m)
     
-    def append_iter(self, m) -> None:
-        self = m
-
     def reverse(self) -> Chaine:
         return self
 
@@ -96,12 +93,6 @@ class Chaine:
     def append(self, m: Chaine) -> Chaine:
         return Chaine(self, m)
     
-    def append_iter(self, m: Chaine) -> None:
-        x = self
-        while not x.next.est_vide():
-            x = x.next
-        x.next = m
-
     def contient(self, x):
         return self.tete() == x or self.queue().contient(x)
 
