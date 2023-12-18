@@ -38,9 +38,11 @@ class ChaineVide:
 
     def append(self, m: Chaine) -> Chaine:
 
-        return Chaine(m, self)
+        return Chaine(self, m)
     
-    
+    def append_iter(self, m) -> None:
+        self = m
+
     def reverse(self) -> Chaine:
         return self
 
@@ -91,8 +93,14 @@ class Chaine:
         return Chaine(v, self)
 
     def append(self, m: Chaine) -> Chaine:
-        return Chaine(m, self)
+        return Chaine(self, m)
     
+    def append_iter(self, m: Chaine) -> None:
+        x = self
+        while not x.next.est_vide():
+            x = x.next
+        x.next = m
+
     def contient(self, x):
         return self.tete() == x or self.queue().contient(x)
 
@@ -147,6 +155,7 @@ class Chaine:
         """
         Chaine.repeat(3, 7) => 7::7::7::()
         """
+        pass
 
 
 l = Chaine(5, Chaine(3, Chaine(7, Chaine(1, ChaineVide()))))
