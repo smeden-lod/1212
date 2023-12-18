@@ -37,8 +37,6 @@ class ChaineVide:
         return Chaine(v, self)
 
     def append(self, m: Chaine) -> Chaine:
-
-        return Chaine(self, m)
         return Chaine(self, m)
     
     def reverse(self) -> Chaine:
