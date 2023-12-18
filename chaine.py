@@ -38,7 +38,7 @@ class ChaineVide:
 
     def append(self, m: Chaine) -> Chaine:
 
-        return Chaine(m, self)
+        return Chaine(self, m)
     
     
     def reverse(self) -> Chaine:
@@ -91,7 +91,7 @@ class Chaine:
         return Chaine(v, self)
 
     def append(self, m: Chaine) -> Chaine:
-        return Chaine(m, self)
+        return Chaine(self, m)
     
     def contient(self, x):
         return self.tete() == x or self.queue().contient(x)
