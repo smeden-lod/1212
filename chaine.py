@@ -42,9 +42,7 @@ class ChaineVide:
     
     
     def reverse(self) -> Chaine:
-        """
-        """
-        pass
+        return self
 
     def zip(self, other: Chaine, res:ChaineVide|Chaine) -> Chaine:
         """
