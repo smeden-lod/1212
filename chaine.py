@@ -119,7 +119,7 @@ class Chaine:
         """
         if other.est_vide():
             return res
-        return self.queue().zip(other.queue(), res.append(Chaine((self.tete(), other.tete()))))
+        return self.queue().zip(other.queue(), res.append(Chaine((self.tete(), other.tete()), ChaineVide())))
 
     def take(self, n) -> Chaine:
         """
@@ -151,3 +151,4 @@ class Chaine:
 
 l = Chaine(5, Chaine(3, Chaine(7, Chaine(1, ChaineVide()))))
 ex = Chaine(1, Chaine(2, Chaine(3, ChaineVide())))
+print(l.zip(ex))
