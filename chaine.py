@@ -44,7 +44,7 @@ class ChaineVide:
     def take(self, n) -> Chaine:
         """
         """
-        pass
+        return 0 
 
     def drop(self, n: int) -> Chaine:
         """
@@ -109,7 +109,6 @@ class Chaine:
         11::3::7::5::12::().take(3) => 11::3::7::()
         11::3::7::5::12::().take(7) => 11::3::7::5::12::()
         """
-        
         if n == 0:
             return ChaineVide
         else:
