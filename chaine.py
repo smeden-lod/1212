@@ -39,6 +39,7 @@ class ChaineVide:
     def append(self, m: Chaine) -> Chaine:
 
         return Chaine(self, m)
+        return Chaine(self, m)
     
     def append_iter(self, m) -> None:
         self = m
