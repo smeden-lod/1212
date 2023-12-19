@@ -108,7 +108,7 @@ class Chaine:
         return self.queue().reverse().append(Chaine(self.tete(), ChaineVide()))
 
 
-    def zip(self, other:Chaine|ChaineVide, res:Chaine|ChaineVide=ChaineVide()) -> Chaine:
+    def zip(self, other, res=ChaineVide()) -> Chaine:
         """
         ## Input
         - other: Chaine à zipper avec self
@@ -117,7 +117,12 @@ class Chaine:
         """
         if other.est_vide():
             return res
-        return self.queue().zip(other.queue(), res.append(Chaine((self.tete(), other.tete()), ChaineVide())))
+        return self.queue().zip(
+            other.queue(), 
+            res.append(
+                Chaine((self.tete(), other.tete()),
+                ChaineVide()))
+            )
 
     def take(self, n) -> Chaine:
         """
