@@ -1,4 +1,5 @@
 from chaine import Chaine
+from chaine import ChaineVide
 
 def appliquer(ch, f):
     """
@@ -28,6 +29,19 @@ def filtrer(ch, f):
     filtrer(ch, lambda x: x<5) renvoie la chaine avec les valeurs dans ch qui sont <5 (dans le même ordre)
     """
     pass
+
+def take(self, n) -> Chaine:
+    """
+    11::3::7::5::12::().take(1) => 11::()
+    11::3::7::5::12::().take(2) => 11::3::()
+    11::3::7::5::12::().take(3) => 11::3::7::()
+    11::3::7::5::12::().take(7) => 11::3::7::5::12::()
+    """
+    if n == 0:
+        return ChaineVide()
+    else:
+        return Chaine(self.tete(), self.queue().take(n-1))
+    
 
 
 
