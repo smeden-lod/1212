@@ -53,7 +53,7 @@ class ChaineVide:
     def take(self, n) -> Chaine:
         """
         """
-        return 0 
+        raise ValueError("chaine vide")
 
     def drop(self, n: int) -> Chaine:
         """
