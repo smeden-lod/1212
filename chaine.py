@@ -27,7 +27,6 @@ class ChaineVide:
     def maxi(self):
         return float('-inf')
 
-
     def cons(self, v):
         """
         renvoi la chaine "ch" tel que :
@@ -61,6 +60,9 @@ class ChaineVide:
         """
         pass
 
+
+    def somme(self) -> int:
+        return 0
 
 class Chaine:
 
@@ -144,6 +146,8 @@ class Chaine:
         """
         pass
 
+    def somme(self) -> int:
+        return self.tete() + self.queue().somme()
 
     @staticmethod
     def repeat(n: int, v: int):
