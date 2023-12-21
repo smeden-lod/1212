@@ -166,4 +166,3 @@ class Chaine:
         except:
             IndexError
         return ChaineVide()
-
