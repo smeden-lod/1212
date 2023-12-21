@@ -157,6 +157,3 @@ class Chaine:
         pass
 
 
-l = Chaine(5, Chaine(3, Chaine(7, Chaine(1, ChaineVide()))))
-ex = Chaine(1, Chaine(2, Chaine(3, ChaineVide())))
-print(l.zip(ex))

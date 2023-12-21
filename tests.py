@@ -1,0 +1,3 @@
+from chaine import *
+
+assert 
