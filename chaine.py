@@ -27,6 +27,7 @@ class ChaineVide:
     def maxi(self):
         return float('-inf')
 
+
     def cons(self, v):
         """
         renvoi la chaine "ch" tel que :
@@ -53,16 +54,13 @@ class ChaineVide:
     def take(self, n) -> Chaine:
         """
         """
-        return
+        raise ValueError("chaine vide")
 
     def drop(self, n: int) -> Chaine:
         """
         """
         pass
 
-
-    def somme(self) -> int:
-        return 0
 
 class Chaine:
 
@@ -146,8 +144,6 @@ class Chaine:
         """
         pass
 
-    def somme(self) -> int:
-        return self.tete() + self.queue().somme()
 
     @staticmethod
     def repeat(n: int, v: int):
@@ -157,3 +153,6 @@ class Chaine:
         pass
 
 
+l = Chaine(5, Chaine(3, Chaine(7, Chaine(1, ChaineVide()))))
+ex = Chaine(1, Chaine(2, Chaine(3, ChaineVide())))
+print(l.zip(ex))
