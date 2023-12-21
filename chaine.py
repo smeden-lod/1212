@@ -78,7 +78,7 @@ class Chaine:
 
     def __eq__(self, other) -> Chaine:
         return not other.est_vide() and (
-            self.tete() == other.tete() and self.queue() == other
+            self.tete() == other.tete() and self.queue() == other.queue()
             )
 
     def est_vide(self):
