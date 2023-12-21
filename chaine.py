@@ -70,6 +70,12 @@ class Chaine:
         self.val = v
         self.next = n
 
+    def __iter__(self):
+       """
+       Returns the Iterator object
+       """
+       return ChaineIterator(self)
+
     def tete(self):
         return self.val
     
@@ -166,3 +172,13 @@ class Chaine:
         except:
             IndexError
         return ChaineVide()
+
+class ChaineIterator:
+    def __init__(self, chaine:Chaine):
+       self._chaine = chaine
+
+    def __next__(self):
+        if not self._chaine.est_vide():
+            self._chaine = self._chaine.drop(1)
+            return self._chaine
+        raise StopIteration
