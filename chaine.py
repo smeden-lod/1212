@@ -35,8 +35,8 @@ class ChaineVide:
         """
         return Chaine(v, self)
 
-    def __and__(self, v) -> Chaine:
-        return self.cons(v)
+    def __eq__(self, other) -> bool:
+        return other.est_vide()
 
     def append(self, m: Chaine) -> Chaine:
         return m
@@ -76,8 +76,10 @@ class Chaine:
     def queue(self):
         return self.next
 
-    def __and__(self, v) -> Chaine:
-        return self.cons(v)
+    def __eq__(self, other) -> Chaine:
+        return not other.est_vide() and (
+            self.tete() == other.tete() and self.queue() == other
+            )
 
     def est_vide(self):
         return False
@@ -164,5 +166,4 @@ class Chaine:
         Chaine.list2chaine([5, 3, 7]) => 5::3::7::()
         """
         pass
-
 
