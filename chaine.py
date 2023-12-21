@@ -160,13 +160,10 @@ class Chaine:
         pass
 
     @staticmethod
-    def list2chaine(list : list[int]) -> Chaine | ChaineVide:
+    def list2chaine(lst : list[int]) -> Chaine | ChaineVide:
         try:
-            return Chaine(list[0], Chaine.list2chaine(list[1:]))
+            return Chaine(lst[0], Chaine.list2chaine(lst[1:]))
         except:
             IndexError
         return ChaineVide()
 
-l = Chaine(5, Chaine(3, Chaine(7, Chaine(1, ChaineVide()))))
-ex = Chaine(1, Chaine(2, Chaine(3, ChaineVide())))
-print(l.zip(ex)) 
