@@ -82,7 +82,7 @@ class Chaine:
     def queue(self):
         return self.next
 
-    def __eq__(self, other) -> Chaine:
+    def __eq__(self, other) -> bool:
         return not other.est_vide() and (
             self.tete() == other.tete() and self.queue() == other.queue()
             )
