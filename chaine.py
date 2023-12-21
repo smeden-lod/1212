@@ -27,7 +27,6 @@ class ChaineVide:
     def maxi(self):
         return float('-inf')
 
-
     def cons(self, v):
         """
         renvoi la chaine "ch" tel que :
@@ -35,6 +34,9 @@ class ChaineVide:
         ch.queue() -> self
         """
         return Chaine(v, self)
+
+    def __and__(self, v) -> Chaine:
+        return self.cons(v)
 
     def append(self, m: Chaine) -> Chaine:
         return m
@@ -73,6 +75,9 @@ class Chaine:
     
     def queue(self):
         return self.next
+
+    def __and__(self, v) -> Chaine:
+        return self.cons(v)
 
     def est_vide(self):
         return False
