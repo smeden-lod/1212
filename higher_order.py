@@ -43,5 +43,16 @@ def take(self, n) -> Chaine:
         return Chaine(self.tete(), self.queue().take(n-1))
     
 
+def TakeInReverse(self, n: int, res=ChaineVide()) -> Chaine:
+        """
+        11::3::7::5::12::().drop(1) => 3::7::5::12::()
+        11::3::7::5::12::().drop(2) => 7::5::12::()
+        11::3::7::5::12::().drop(3) => 5::12::()
+        """
+        if n == 0:
+            return res
+        return self.queue().drop(n-1, res.cons(self.tete()))
+    
+
 
 
