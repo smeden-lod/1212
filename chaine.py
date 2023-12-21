@@ -156,4 +156,12 @@ class Chaine:
         """
         pass
 
+    @staticmethod
+    def list2chaine(l: list[int]) -> ChaineVide | Chaine:
+        """
+        Chaine.list2chaine([]) => ChaineVide()
+        Chaine.list2chaine([5, 3, 7]) => 5::3::7::()
+        """
+        pass
+
 
